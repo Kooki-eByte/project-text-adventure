@@ -2,13 +2,17 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:1337/",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "concurrently \"npm run start:client\" \"npm run start:backend\"",
+    "start:client": "vue-cli-service serve",
+    "start:backend": "cd ../backend && npm run dev",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "concurrently": "^7.1.0",
     "core-js": "^3.8.3",
     "register-service-worker": "^1.7.2",
     "vue": "^2.6.14",

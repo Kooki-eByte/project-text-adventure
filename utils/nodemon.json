@@ -1,0 +1,6 @@
+{
+  "watch": ["backend/src"],
+  "ext": "ts",
+  "ignore": ["client"],
+  "exec": "ts-node src/app.ts dev"
+}

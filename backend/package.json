@@ -4,12 +4,19 @@
   "description": "class-based vue and express game web app for fun",
   "main": "/bin/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc -w",
+    "dev": "nodemon bin/app.js"
   },
   "repository": {
     "type": "git",
     "url": "project-text-adventure"
   },
   "author": "Cristian Hornedo",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
 }
